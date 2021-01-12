@@ -63,16 +63,18 @@ body {
 }
 
 #banner-background {
-    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-#blue {
+.banner-color {
     width: calc(100% / 3);
     height: 100%;
+}
+
+#blue {
     background-color: var(--pastel-blue);
     animation: animation-blue 15s ease-in-out infinite;
 }
@@ -93,8 +95,6 @@ body {
 }
 
 #yellow {
-    width: calc(100% / 3);
-    height: 100%;
     background-color: var(--pastel-yellow);
     animation: animation-yellow 15s ease-in-out infinite;
 }
@@ -115,8 +115,6 @@ body {
 }
 
 #red {
-    width: calc(100% / 3);
-    height: 100%;
     background-color: var(--pastel-red);
     animation: animation-red 15s ease-in-out infinite;
 }
