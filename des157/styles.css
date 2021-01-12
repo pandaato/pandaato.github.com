@@ -46,6 +46,7 @@ body {
     margin: auto;
     margin-bottom: 1em;
     position: relative;
+    display:flex;
     background-color: white;
     overflow: hidden;
 }
