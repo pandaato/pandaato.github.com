@@ -14,8 +14,9 @@ h1, h2, h3, h4, p, ul, ol, li {
 }
 
 a {
-    text-decoration: none;
     color: var(--dark);
+    text-decoration: none;
+    padding: 5px;
 }
 
 a:hover {
@@ -24,19 +25,13 @@ a:hover {
 }
 
 /* Styles dealing with body */
-html {
-    position: relative;
-    color: var(--dark);
-    background-color: var(--dark);
-}
-
 body {
     font-family: 'IBM Plex Sans', sans-serif;
     margin: auto;
     max-width: 1200px;
     min-width: 800px;
     padding: 2em;
-    background-color: white;
+    color: var(--dark);
 }
 
 /* Styles dealing with banner */
@@ -47,7 +42,6 @@ body {
     margin-bottom: 1em;
     position: relative;
     display:flex;
-    background-color: white;
     overflow: hidden;
 }
 
@@ -130,6 +124,7 @@ body {
 
 /* Styles dealing with main */
 main {
+    color: var(--dark);
     display: flex;
     justify-content: space-around;
     margin-bottom: 1em;
@@ -146,6 +141,10 @@ section li {
     list-style-type: none;
 }
 
+section ul {
+    padding: 5px;
+}
+
 /* Styles dealing with footer */
 footer {
     display: flex;
@@ -153,5 +152,5 @@ footer {
 }
 
 footer a {
-    margin: 0 1em 1em;
+    margin: 0.5em;
 }
