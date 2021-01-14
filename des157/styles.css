@@ -126,7 +126,7 @@ body {
 main {
     color: var(--dark);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 1em;
 }
 
@@ -134,7 +134,7 @@ section {
     width: calc(30%);
     background-color: var(--light);
     box-sizing: border-box;
-    padding: 1em 1.5em;
+    padding: 1.5em 1.25em;
 }
 
 section li {
