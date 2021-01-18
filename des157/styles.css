@@ -139,6 +139,7 @@ section {
 
 section li {
     list-style-type: none;
+    padding-bottom: 5px;
 }
 
 section ul {
