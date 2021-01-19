@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experimentation - Functions & DOM</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>JS Experimentation - Functions & DOM</h1>
+
+    <section id="mainText"></section>
+    
+    <script>
+        /* Takes an input of three numbers between 0-256 and sets that to an rgb color value.
+        Creates and appends a random number of lines between 1-50 with a random number of stars
+        to section */
+        
+        var body = document.querySelector("body");
+        body.style.fontFamily = "'IBM Plex Sans', sans-serif";
+
+        function getColor() {
+            var input = prompt("Input 3 numbers between 0-256, seperated by spaces:", "");
+
+            // No input given
+            if(input == null) {
+                alert("Invalid input. Try again.")
+                return getColor();
+            }
+
+            var repeat = false;
+            var numbers = input.split(" ");
+            var rbg = [];
+
+            for(var i = 0; i < numbers.length; i++) {
+                // If character is a space then skip it
+                if(!numbers[i][0]) {
+                    continue;
+                }
+
+                rbg.push(numbers[i]);
+            }
+
+            if(rbg.length != 3) {
+                alert("Invalid input. Try again.")
+                return getColor();
+            }
+
+            // Check that number is valid
+            for(var i = 0; i < rbg.length; i++) {
+                if(!(rbg[i] >= 0 && rbg[i] <= 256)) {
+                    alert("Invalid input. Try again.");
+                    return getColor();
+                }
+            }
+
+            return rbg;
+        }
+
+        function randomInt(min, max) {
+            return Math.floor((max - min + 1) * Math.random()) + min;
+        }
+
+        function printRandomLines(color) {
+            console.log(color);
+            var section = document.getElementById("mainText");
+            var values = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+            section.style.color = values;
+            var numLines = randomInt(1, 50);
+
+            for(var i = 0; i < numLines; i++) {
+                var line = document.createElement("p");
+                var content = "";
+
+                for(var j = 0; j < randomInt(i, 50); j++) {
+                    content += "*";
+                }
+
+                var para = document.createTextNode(content);
+                line.appendChild(para);
+                section.appendChild(line);
+            }
+        }
+
+        printRandomLines(getColor());
+    </script>
+
+</body>
+</html>
