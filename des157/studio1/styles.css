@@ -179,7 +179,7 @@ main::-webkit-scrollbar {
 /* Handle */
 main::-webkit-scrollbar-thumb {
     background-color: var(--inputDark);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 #is-examityscreenshare-installed {
