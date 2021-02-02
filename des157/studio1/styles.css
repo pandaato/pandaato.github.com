@@ -181,3 +181,7 @@ main::-webkit-scrollbar-thumb {
     background-color: var(--inputDark);
     border-radius: 5px;
 }
+
+#is-examityscreenshare-installed {
+    position: absolute;
+}
