@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Libs 2.0</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Just Another Conversation</h1>
+    </header>
+
+    <main>
+        <form id="mlForm" autocomplete="off">
+            <div>
+                <label for="name1">Give a name</label>
+                <input type="text" id="name1" required>
+            </div>
+            
+            <div>
+                <label for="name2">Give another name</label>
+                <input type="text" id="name2" required>
+            </div>
+
+            <div>
+                <label for="place">Give a place</label>
+                <input type="text" id="place" required>
+            </div>
+
+            <div>
+                <label for="color">Give a color</label>
+                <input type="text" id="color" required>
+            </div>
+
+            <div>
+                <label for="noun">Give a noun</label>
+                <input type="text" id="noun" required>
+            </div>
+
+            <div>
+                <label for="verb">Give a verb</label>
+                <input type="text" id="verb" required>
+            </div>
+
+            <div>
+                <label for="adjective">Give an adjective</label>
+                <input type="text" id="adjective" required>
+            </div>
+
+            <div>
+                <label for="animal">Give an animal</label>
+                <input type="text" id="animal" required>
+            </div>
+
+            <div>
+                <legend>Choose one</legend>
+
+                <input type="radio" name="dessert" id="icecream" value="ice cream">
+                <label for="icecream" class="radio selected">ice cream</label>
+
+                <input type="radio" name="dessert" id="cremebrulee" value="crème brûlée">
+                <label for="cremebrulee" class="radio">crème brûlée</label>
+
+                <input type="radio" name="dessert" id="cake" value="cake">
+                <label for="cake" class="radio">cake</label>
+            </div>
+
+            <input type="submit" value="send it">
+        </form>
+
+        <article id="mlOutput"></article>
+    </main>
+
+    <footer>
+        <h3>
+            <a href="mailto:&#112;&#099;&#108;&#105;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">
+                pclin@ucdavis.edu</a>
+        </h3>
+
+        <h3>|</h3>
+        
+        <h3>
+            <a href="https://validator.w3.org/check?uri=referer">
+                Valid HTML 5</a>
+        </h3>
+        
+        <h3>|</h3>
+
+        <h3>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                Valid CSS</a>
+        </h3>
+    </footer>
+    
+</body>
+</html>
