@@ -57,6 +57,11 @@ h2 {
     margin-bottom: 1em;
     background-color: black;
     position: relative;
+    transition: background-color 2s;
+}
+
+#banner:hover {
+    background-color: whitesmoke;
 }
 
 .circle {
