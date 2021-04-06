@@ -95,7 +95,7 @@ h2 {
 
 @keyframes circ2 {
     0% {
-        transform: translate(-125px, -50%);
+        transform: translate(-150px, -50%);
         height: 50px;
         width: 50px;
         z-index: 2;
@@ -115,7 +115,7 @@ h2 {
         width: 25px;
     }
     100% {
-        transform: translate(-125px, -50%);
+        transform: translate(-150px, -50%);
         height: 50px;
         width: 50px;
     }
@@ -133,7 +133,7 @@ h2 {
         width: 100px;
     }
     50% {
-        transform: translate(-125px, -50%);
+        transform: translate(-150px, -50%);
         height: 50px;
         width: 50px;
         
