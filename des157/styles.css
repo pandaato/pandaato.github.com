@@ -83,14 +83,14 @@ h2 {
     z-index: 1;
     background-color: var(--med);
     opacity: .5;
-    animation: circ2 linear 5s infinite;
+    animation: circ2 ease-in-out 5s infinite;
 }
 
 #circ3 {
     z-index: 1;
     background-color: var(--highlight);
     opacity: .5;
-    animation: circ3 linear 5s infinite;
+    animation: circ3 ease-in-out 5s infinite;
 }
 
 @keyframes circ2 {
