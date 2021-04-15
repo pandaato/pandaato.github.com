@@ -1,0 +1,143 @@
+/* Colors to be reused throughout page */
+:root {
+    --dark: #2E3338;
+    --med: #45637a;
+    --light: #ADEFD1FF;
+    --accent: #0A2239;
+    --highlight: #FF9F1C;
+}
+
+/* Generic styles */
+h1, h2, h3, h4, p, ul, ol, li {
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.05em;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--accent);  
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    overflow-x: hidden;
+    color: var(--light);
+    background-color: var(--med);
+}
+
+#container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1100px;
+    min-width: 900px;
+    padding: 2em 2em 0 2em;
+    margin: auto;
+}
+
+/* Header */
+header {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#logo {
+    width: 100px;
+    margin: 0 auto 1rem;
+}
+
+h1 {
+    color: var(--dark);
+    text-align: center;
+}
+
+/* Aside nav */
+aside {
+    box-sizing: border-box;
+    position: fixed;
+}
+
+ul a {
+    font-size: 1.25rem; 
+}
+
+/* Main */
+article {
+    width: 100%;
+    position: relative;
+}
+
+h2 {
+    color: var(--highlight);
+    padding: 0 2rem;
+    font-size: 2rem;
+}
+
+h3 {
+    color: var(--dark);
+    padding: 0 2rem;
+}
+
+article a {
+    padding: 0;
+}
+
+hr {
+    border: none;
+    border-radius: 25px;
+    height: 25px;
+    width: 750px;
+    text-align: left;
+    background-color: var(--light);
+    position: absolute;
+    top: 10px;
+    left: -0px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+p {
+    width: 450px;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    padding: 1rem 1rem 0;
+}
+
+article img {
+    width: 450px;
+    display: block;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    margin: 0 0.5em 1em 0.5em;
+    font-size: 1.1rem;
+}
