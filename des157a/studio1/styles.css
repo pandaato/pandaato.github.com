@@ -1,0 +1,187 @@
+/* Colors to be reused throughout page */
+:root {
+    --dark: #2D3142;
+    --light: #B0D7FF;
+    --inputLight: #D8D5DB;
+    --inputDark: #ADACB5;
+}
+
+/* Generic styles */
+h1, h2, h3, h4, p, ul, ol, li, input, label, img {
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: var(--dark);
+    color: var(--dark);
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header {
+    width: 40%;
+}
+
+h1 {
+    color: var(--inputLight);
+    font-size: 5rem;
+}
+
+main {
+    background-color: white;
+    padding: 1em;
+    border-radius: 10px;
+    width: 400px;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+form {
+    font-weight: 500;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.transition-hidden {
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+
+.hidden {
+    display: none;
+}
+
+.transition-madlib {
+    width: 800px;
+    height: 500px;
+    transform: translate(-39%, 0);
+    transition: 1s ease-out;
+}
+
+.showingmadlib {
+    width: 800px;
+    height: 500px;
+}
+
+input[type=text] {
+    padding: 5px;
+    background-color: var(--inputLight);
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+input[type=text]:focus {
+    background-color: var(--inputDark);
+    outline: none;
+    caret-color: var(--inputLight);
+    transition: 0.25s;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    background-color: var(--dark);
+    color: var(--light);
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    margin: auto;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+input[type=submit]:hover {
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 10px;
+    transition: 0.25s;
+    outline: none;
+}
+
+.radio {
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--inputLight);
+    transition: 0.25s;
+}
+
+.selected {
+    background-color: var(--inputDark);
+}
+
+#mlOutput p {
+    padding: 10px;
+    border-radius: 5px;
+    width: 55%;
+}
+
+.person1 {
+    background-color: var(--inputLight);
+    color: var(--dark);
+    float: left;
+}
+
+.person2 {
+    background-color: var(--light);
+    color: var(--dark);
+    float: right;
+}
+
+.lastmessage {
+    background-color: white;
+    float: left;
+}
+
+img {
+    width: 55%;
+    border-radius: 10px;
+}
+
+/* Styles dealing with footer */
+footer {
+    color: var(--inputLight);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 2.5vh;
+}
+
+footer a {
+    color: var(--inputLight);
+    text-decoration: none;
+    padding: 5px;
+    margin: 0.5em;
+}
+
+footer a:hover {
+    color: var(--light);
+}
+
+/* width */
+main::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Handle */
+main::-webkit-scrollbar-thumb {
+    background-color: var(--inputDark);
+    border-radius: 10px;
+}
+
+#is-examityscreenshare-installed {
+    position: absolute;
+}
