@@ -19,6 +19,7 @@
         */
 
         const container = document.querySelector('#container');
+        const shapes = ['square', 'triangle'];
         container.style.margin = 'auto';
         container.style.width = '50%';
         container.style.textAlign = 'center';
@@ -33,7 +34,7 @@
 
         // Returns user-prompted shape, if valid
         function getShape() {
-            const shape = prompt("Choose a square or triangle:");
+            const shape = prompt(`Choose a ${shapes[0]} or ${shapes[1]}:`);
 
             // Shape is not valid, so prints out error message
             if (!shapeValid(shape)) {
@@ -46,14 +47,14 @@
         
         // Checks if user-prompted shape is valid
         function shapeValid(shape) {
-            return (shape != null && (shape.toLowerCase() == 'square' || shape.toLowerCase() == 'triangle'))
+            return (shape != null && (shape.toLowerCase() == shapes[0] || shape.toLowerCase() == shapes[1]))
         }
 
         function printShape(shape) {
             if (shape == null) {
                 return;
             // Print out square
-            } else if (shape.toLowerCase() == 'square') {
+            } else if (shape.toLowerCase() == shapes[0]) {
                 printSquare();
             // Print out triangle
             } else {
