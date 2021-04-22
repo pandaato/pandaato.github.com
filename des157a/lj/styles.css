@@ -79,10 +79,12 @@ ul a {
 article {
     width: 100%;
     position: relative;
+    margin: 0 0 2rem 0;
 }
 
 h2 {
     color: var(--highlight);
+    margin: 0 0 0.5rem 0;
     padding: 0 2rem;
     font-size: 2rem;
 }
@@ -90,6 +92,7 @@ h2 {
 h3 {
     color: var(--dark);
     padding: 0 2rem;
+    margin: 0 0 0.5rem 0; 
 }
 
 article a {
@@ -99,12 +102,12 @@ article a {
 hr {
     border: none;
     border-radius: 25px;
-    height: 25px;
+    height: 20px;
     width: 750px;
     text-align: left;
     background-color: var(--light);
     position: absolute;
-    top: 10px;
+    top: 12.5px;
     left: -0px;
     opacity: 0.1;
     z-index: -1;
@@ -120,7 +123,7 @@ p {
     width: 450px;
     font-size: 1.25rem;
     line-height: 2rem;
-    padding: 1rem 1rem 0;
+    padding: 0.5rem 1rem 0;
 }
 
 article img {
