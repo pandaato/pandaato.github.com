@@ -127,10 +127,14 @@ p {
 }
 
 article img {
-    width: 450px;
+    width: 100%;
     display: block;
     margin: auto;
     padding: 2rem;
+}
+
+#article1-img {
+    width: 450px;
 }
 
 /* Footer */
