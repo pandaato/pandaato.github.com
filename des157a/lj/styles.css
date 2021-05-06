@@ -129,12 +129,22 @@ p {
 article img {
     width: 100%;
     display: block;
-    margin: auto;
-    padding: 2rem;
+    padding: 0;
 }
 
-#article1-img {
+#article1 figure {
     width: 450px;
+    margin: auto;
+}
+
+#article4 figure {
+    width: 600px;
+    margin: auto;
+}
+
+figcaption {
+    font-style: italic;
+    padding-bottom: 1rem;
 }
 
 /* Footer */
