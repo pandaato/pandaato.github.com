@@ -165,6 +165,7 @@ footer a {
     text-decoration: none;
     padding: 5px;
     margin: 0.5em;
+    font-size: 1.05em;
 }
 
 footer a:hover {
