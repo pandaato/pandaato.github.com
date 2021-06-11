@@ -38,4 +38,27 @@
     function enableScroll() {
         document.body.classList.remove('stop-scroll');
     }
+
+    // User test button show / hide prompt.
+    const userTestOverlay = document.querySelector('#overlay');
+    const userTestBtn = document.querySelector('button');
+
+    userTestBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        hideOverlay();
+    });
+
+    function showOverlay() {
+        userTestOverlay.removeEventListener('click', showOverlay);
+        userTestOverlay.classList.remove('different');
+    }
+
+    function hideOverlay() {
+        userTestOverlay.classList.add('different');
+        setTimeout(addShowOnClick, 100);
+    }
+
+    function addShowOnClick() {
+        userTestOverlay.addEventListener('click', showOverlay);
+    }
 } ());
