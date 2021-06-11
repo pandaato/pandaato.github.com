@@ -106,7 +106,16 @@ img {
     padding: 30px 30px 90px;
 }
 
-#focus p {
+#focus-date {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    top: 600px;
+}
+
+#close {
     position: absolute;
     text-align: center;
     left: 50%;
@@ -119,7 +128,7 @@ img {
     transition: color 0.5s;
 }
 
-#focus p:hover {
+#close:hover {
     cursor: pointer;
     color: var(--highlight);
 }
@@ -134,10 +143,22 @@ img {
     height: 10px;
 }
 
-.polaroid img:hover {
+.polaroid p {
+    width: 190px;
+    position: absolute;
+    top: 235px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hover-enlarge {
+    transition: 0.5s;
+}
+
+.hover-enlarge:hover {
     cursor: pointer;
     transform: scale(1.05);
-    transition: 0.5s;
 }
 
 #img01 {
@@ -165,11 +186,11 @@ img {
 }
 
 #img07 {
-    transform: translate(255px, -35px);
+    transform: translate(330px, -60px);
 }
 
 #img08 {
-    transform: translate(355px, 175px);
+    transform: translate(200px, 130px);
 }
 
 #img09 {
@@ -231,6 +252,20 @@ img {
     z-index: -1;
 }
 
+#texts p {
+    transition: ease-out 1s;
+}
+
+.hide-left {
+    opacity: 0;
+    margin-left: -50% !important;
+}
+
+.hide-right {
+    opacity: 0;
+    margin-left: 50% !important;
+}
+
 .p01 {
     transform: translate(225px, 850px);
 }
@@ -252,11 +287,11 @@ img {
 }
 
 .p06 {
-    transform: translate(-250px, 2850px);
+    transform: translate(-350px, 2800px);
 }
 
 .p07 {
-    transform: translate(-100px, 2900px);
+    transform: translate(-150px, 2900px);
 }
 
 .p08 {
@@ -264,14 +299,14 @@ img {
 }
 
 .special {
-    color: var(--highlight);
+    font-weight: bold;
 }
 
 /* Footer */
 footer {
     font-family: 'Work Sans', sans-serif;
     position: absolute;
-    top: 4975px;
+    top: 4960px;
     width: inherit;
     text-align: center;
 }
