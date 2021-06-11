@@ -8,7 +8,7 @@
 
     const polaroids = document.querySelectorAll('.polaroid');
     const texts = document.querySelectorAll('#texts p');
-    let inScroll = false;
+    let loaded = false;
     
     // Exit focus view by clicking outside.
     focus.addEventListener('click', function() {
@@ -55,16 +55,28 @@
 
     // Make text slide in if in view.
     document.addEventListener('scroll', function() {
-        texts.forEach(function(text) {
-            console.log(isInView(text));
-            if (isInView(text) && text.getAttribute('data-inview') == 'false') {
-                console.log('test');
-                text.setAttribute('data-inview', true);
-                text.classList.remove('hide-left');
-                text.classList.remove('hide-right');
-            }
-        });
+        if (loaded) {
+            texts.forEach(function(text) {
+                console.log(isInView(text));
+                if (isInView(text) && text.getAttribute('data-inview') == 'false') {
+                    console.log('test');
+                    text.setAttribute('data-inview', true);
+                    text.classList.remove('hide-left');
+                    text.classList.remove('hide-right');
+                }
+            });
+        }
     });
+
+    // Force window to start at top.
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+        loaded = true;
+    })
+    
+    window.addEventListener('beforeunload', function() {
+        window.scrollTo(0, 0);
+    })
 
     // Returns true if element is floow in view
     function isInView(element) {
