@@ -253,7 +253,7 @@ img {
 }
 
 #texts p {
-    transition: ease-out 1s;
+    transition: opacity ease-out 1s, margin-left ease-out 1s, margin-right ease-out 1s;
 }
 
 .hide-left {
