@@ -23,7 +23,7 @@
         // Delay swapping modes until page is done 'flipping'
         transitionID = setTimeout(function() {
             if (mode == 'sketch') {
-                mode = 'neon';
+                mode = 'dark-mode';
             } else {
                 mode = 'sketch';
             }
@@ -31,11 +31,11 @@
             button.classList.toggle('transition');
             transition = false;
 
-            body.classList.toggle('neon');
-            banner.classList.toggle('neon');
-            button.classList.toggle('neon');
+            body.classList.toggle('dark-mode');
+            banner.classList.toggle('dark-mode');
+            button.classList.toggle('dark-mode');
             for (const section of sections) {
-                section.classList.toggle('neon');
+                section.classList.toggle('dark-mode');
             }
         }, 1000);
     })

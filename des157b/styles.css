@@ -14,14 +14,16 @@ h1, h2, h3, h4, p, ul, ol, li {
     --black: #131112;
     --white: #F7F7FF;
 
-    /* Neon */
-    --dark: #ba5370;
-    --light: #f4e2d8;
+    /* dark */
+    --dark: #0F202E;
+    --med: #37718E;
+    --light: #AEF3E7;
 }
 
 body {
     background-color: var(--white);
     color: var(--black);
+    font-family: 'Rampart One';
 }
 
 #container {
@@ -30,11 +32,6 @@ body {
     min-width: 900px;
     padding: 2em 1.5em;
     margin: auto;
-}
-
-h1, h2, h3 {
-    font-family: 'Rampart One';
-    
 }
 
 h3 {
@@ -178,62 +175,74 @@ button.transition:before {
     transition: border-width 0.5s ease-out;
 }
 
-/* Neon Override */
-body.neon {
-    background: linear-gradient(45deg, var(--dark), var(--light));
-    color: var(--black);
-}
-
-body.neon h1, body.neon h2, body.neon h3 {
+/* dark Override */
+body.dark-mode {
+    background: var(--dark);
     font-family: 'Montserrat';
-    opacity: 0.75;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
-body.neon a {
+body.dark-mode h1 {
+    color: var(--light);
+    text-shadow: 
+        0 0 1px var(--light),
+        0 0 25px var(--light);
+}
+
+body.dark-mode h2, body.dark-mode h3 {
+    color: var(--med);
+    text-shadow: 0 0 10px var(--med);
+}
+
+body.dark-mode a {
     font-family: 'IBM Plex Sans Condensed';
-    color: var(--white);
+    color: var(--light);
     border-radius: 5px;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     transition: 0.5s;
 }
 
-section.neon a:hover {
+section.dark-mode a:hover {
     box-shadow:
-        5px 5px 10px rgba(0, 0, 0, 0.1),
-        -5px -5px 10px rgba(255, 255, 255, 0.1);
+        5px 5px 10px rgba(0, 0, 0, 0.25),
+        -5px -5px 10px rgba(255, 255, 255, 0.05);
     transition: 0.5s;
 }
 
-section.neon a:hover, section.neon a:hover::after {
+section.dark-mode a:hover, section.dark-mode a:hover::after {
     border: 1px solid transparent;
 }
 
-#banner.neon {
+#banner.dark-mode {
     overflow: visible;
     padding: 1em;
     border-radius: 10px;
     box-shadow:
-        5px 5px 10px rgba(0, 0, 0, 0.1),
-        -5px -5px 10px rgba(255, 255, 255, 0.1);
+        5px 5px 10px rgba(0, 0, 0, 0.25),
+        -5px -5px 10px rgba(255, 255, 255, 0.05);
 }
 
-#banner.neon .bar {
-    background-color: var(--white);
+#banner.dark-mode .bar {
+    background-color: var(--light);
     max-height: calc(250px - 2em);
     border-radius: 1px;
     opacity: 0.75;
 }
 
-section.neon {
+section.dark-mode {
     border: none;
     border-radius: 10px;
     padding: 1em 1.25em 0;
     box-shadow:
-        5px 5px 10px rgba(0, 0, 0, 0.1),
-        -5px -5px 10px rgba(255, 255, 255, 0.1);
+        5px 5px 10px rgba(0, 0, 0, 0.25),
+        -5px -5px 10px rgba(255, 255, 255, 0.05);
 }
 
-section.neon::before {
+section.dark-mode::before {
     border: none;
+}
+
+button.dark-mode:before {
+    box-shadow: 
+        0 0 10px rgba(0,0,0,0.5), 
+        -1px 1px 5px rgba(0, 0, 0, 0.5);
+    border-color: var(--black) var(--black) var(--dark) var(--dark);
 }
