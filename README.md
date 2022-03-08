@@ -1,1 +1,1 @@
-[pandaato.github.io](www.pandaato.github.io)
+[pandaato.github.io](https://pandaato.github.io)
